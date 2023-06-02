@@ -11,7 +11,6 @@ function App() {
   //give user option to hide menu and audio corner
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
   const toggleMenu = () => {
     let menu = document.querySelector("#menu-container");
     if (menu.classList.contains("hide")) {

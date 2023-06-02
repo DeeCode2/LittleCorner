@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import "./App.scss";
-import "./Menu.scss";
-import "./Themes.scss";
-import Audios from "./Audios";
+import { useState, useEffect } from 'react';
+import './App.scss';
+import './Menu.scss';
+import './Themes.scss';
+import Audios from './Audios';
+import CountdownTimer from './timer/CountdownTimer'
 
 function App() {
   //menu will contain links, timer and toggle buttons to change the scene
@@ -10,35 +11,48 @@ function App() {
   //scene will cover entire page
   //give user option to hide menu and audio corner
 
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const toggleMenu = () => {
-    let menu = document.querySelector("#menu-container");
-    if (menu.classList.contains("hide")) {
-      menu.classList.remove("hide");
-      menu.classList.add("show");
+    let menu = document.querySelector('#menu-container');
+    if (menu.classList.contains('hide')) {
+      menu.classList.remove('hide');
+      menu.classList.add('show');
     } else {
-      menu.classList.add("hide");
-      menu.classList.remove("show");
+      menu.classList.add('hide');
+      menu.classList.remove('show');
     }
     //console.log(menu.classList)
   };
 
-  const toggleTheme = (e) => {
-    if (theme == "light") {
-      setTheme("dark");
-      // document
-      //   .getElementById("toggle-btn")
-      //   .setAttribute("aria-pressed", "true");
+  //TOGGLE MODALS
+
+  const toggleTimer = () => {
+    let timer = document.getElementById('timer-container');
+    if (timer.classList.contains('hide')) {
+      timer.classList.remove('hide')
+      timer.classList.add('show')
     } else {
-      setTheme("light");
+      timer.classList.remove('show')
+      timer.classList.add('hide')
+    }
+  }
+
+  const toggleTheme = (e) => {
+    if (theme == 'light') {
+      setTheme('dark');
       // document
-      //   .getElementById("toggle-btn")
-      //   .setAttribute("aria-pressed", "false");
+      //   .getElementById('toggle-btn')
+      //   .setAttribute('aria-pressed', 'true');
+    } else {
+      setTheme('light');
+      // document
+      //   .getElementById('toggle-btn')
+      //   .setAttribute('aria-pressed', 'false');
     }
   };
 
   useEffect(() => {
-    localStorage.setItem("theme", theme);
+    localStorage.setItem('theme', theme);
     document.body.className = theme;
   }, [theme]);
 
@@ -46,28 +60,30 @@ function App() {
     //LIGHT AND DARK THEME
 
     <>
-      <div id="settings-container">
-        <button type="button">Timer</button>
-        <button type="button">To-do</button>
-        <button onClick={toggleTheme} id="toggle-scene">
-          <span>{theme.toUpperCase()}</span>
+      <div id='settings-container'>
+        <button type='button' onClick={toggleTimer}>Timer</button>
+        <button type='button'>To-do</button>
+        <button onClick={toggleTheme} id='toggle-scene'>
+          <span>{theme}</span>
         </button>
       </div>
 
+      <CountdownTimer/>
+
       <main className={`App ${theme} corner`}>
-        <section id="scene-container">
-          {theme == "light" ? (
-            <img src="/scenes/lc-day-cropped.png" />
+        <section id='scene-container'>
+          {theme == 'light' ? (
+            <img src='/scenes/lc-day-cropped.png' />
           ) : (
-            <img src="/scenes/lc-night-cropped.png" />
+            <img src='/scenes/lc-night-cropped.png' />
           )}
-          {/* <img src="/scenes/day.jpg"/> */}
+          {/* <img src='/scenes/day.jpg'/> */}
         </section>
 
-        <section id="left-container">
+        <section id='left-container'>
           {/* <button type='button' onClick={toggleMenu} id='toggle-menu'>MENU</button> */}
 
-          <div id="title">
+          <div id='title'>
             <h1>Little Corner</h1>
             <p>Lorem ipsum sit dolor amet</p>
           </div>
@@ -75,6 +91,9 @@ function App() {
           <Audios />
         </section>
       </main>
+      <footer>
+            <p>Inspired by <a href='' target='b_blank'>I Miss My Cafe</a> and <a href='https://store.steampowered.com/app/1369320/Virtual_Cottage/' target='_blank'>Virtual Cottage</a> </p>
+      </footer>
     </>
   );
 }

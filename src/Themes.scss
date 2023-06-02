@@ -1,100 +1,98 @@
 @use "./App.scss";
 
 .dark {
+  background-color: App.$night;
+  color: App.$white;
+
   .App {
-    background-color: App.$night;
-    color: App.$white;
+    //color: App.$white;
 
     .audio-player {
-        button {
-            color: App.$white;
+      button {
+        color: App.$white;
+      }
+      input {
+        &::-webkit-slider-runnable-track {
+          background: App.$white;
         }
-        input {
-            &::-webkit-slider-runnable-track {
-                background: App.$white;
-            }
-            &::-webkit-slider-thumb {
-                background: App.$white;
-                border: 3px solid App.$night;
-            }
-            &:focus::-webkit-slider-runnable-track {
-                background: App.$white;
-            }
-            &::-moz-range-track {
-                background: App.$white;
-            }
-            &::-moz-range-thumb {
-                background: App.$white;
-                border: 3px solid App.$night;
-            }
-            &::-ms-fill-lower {
-                background: App.$white;
-            }
-            &::-ms-fill-upper {
-                background: App.$white;
-            }
-            &::-ms-thumb {
-                background: App.$white;
-                border: 3px solid App.$night;
-            }
-            &:focus::-ms-fill-lower {
-                background: App.$white;
-            }
-            &:focus::-ms-fill-upper {
-                background: App.$white;
-            }
+        &::-webkit-slider-thumb {
+          background: App.$white;
+          border: 3px solid App.$night;
         }
-      
+        &:focus::-webkit-slider-runnable-track {
+          background: App.$white;
+        }
+        &::-moz-range-track {
+          background: App.$white;
+        }
+        &::-moz-range-thumb {
+          background: App.$white;
+          border: 3px solid App.$night;
+        }
+        &::-ms-fill-lower {
+          background: App.$white;
+        }
+        &::-ms-fill-upper {
+          background: App.$white;
+        }
+        &::-ms-thumb {
+          background: App.$white;
+          border: 3px solid App.$night;
+        }
+        &:focus::-ms-fill-lower {
+          background: App.$white;
+        }
+        &:focus::-ms-fill-upper {
+          background: App.$white;
+        }
+      }
     }
   }
 }
 
 .light {
+  background-color: App.$day;
+  color: App.$black;
   .App {
-    background-color: App.$day;
-    color: App.$black;
-
     .audio-player {
-
-        button {
-            color: App.$black;
+      button {
+        color: App.$black;
+      }
+      input {
+        &::-webkit-slider-runnable-track {
+          background: App.$black;
         }
-        input {
-            &::-webkit-slider-runnable-track {
-                background: App.$black;
-            }
-            &::-webkit-slider-thumb {
-                background: App.$black;
-                border: 3px solid App.$day;
-            }
-            &:focus::-webkit-slider-runnable-track {
-                background: App.$black;
-            }
-            &::-moz-range-track {
-                background: App.$black;
-            }
-            &::-moz-range-thumb {
-                background: App.$black;
-                border: 3px solid App.$day;
-            }
-            &::-ms-fill-lower {
-                background: App.$black;
-            }
-            &::-ms-fill-upper {
-                background: App.$black;
-            }
-            &::-ms-thumb {
-                background: App.$black;
-                border: 3px solid App.$day;
-            }
-            &:focus::-ms-fill-lower {
-                background: App.$black;
-            }
-            &:focus::-ms-fill-upper {
-                background: App.$black;
-            }
+        &::-webkit-slider-thumb {
+          background: App.$black;
+          border: 3px solid App.$day;
         }
-      
+        &:focus::-webkit-slider-runnable-track {
+          background: App.$black;
+        }
+        &::-moz-range-track {
+          background: App.$black;
+        }
+        &::-moz-range-thumb {
+          background: App.$black;
+          border: 3px solid App.$day;
+        }
+        &::-ms-fill-lower {
+          background: App.$black;
+        }
+        &::-ms-fill-upper {
+          background: App.$black;
+        }
+        &::-ms-thumb {
+          background: App.$black;
+          border: 3px solid App.$day;
+        }
+        &:focus::-ms-fill-lower {
+          background: App.$black;
+        }
+        &:focus::-ms-fill-upper {
+          background: App.$black;
+        }
+      }
     }
   }
 }

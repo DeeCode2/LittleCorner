@@ -16,8 +16,10 @@ $white: #edece0;
 //BUTTONS
 @mixin btns {
   padding: .3em;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: .3em;
+  border: none;
+  cursor: pointer;
 }
 
 * {
@@ -30,7 +32,7 @@ body {
   overflow-x: hidden;
   
   @media only screen and (min-width: 900px) {
-    height: 100vh;
+    //height: 100vh;
     
     //grid-template-areas: "a b c";
     //grid-template-columns: 1fr 2fr 1fr;
@@ -68,6 +70,8 @@ body {
 
     @media only screen and (min-width: 900px) {
       //display: flex;
+      //overflow-y: hidden;
+      padding: .5em 1em;
       flex-direction: row;
     }
     
@@ -83,17 +87,29 @@ body {
       grid-area: b;
       overflow: hidden;
       //border: solid green;
-      height: 100vh;
+      height: 50vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      
+      z-index: 0;
+      width: 100%;
+      margin-top: 2.5em;
 
       img {
         height: 100%;
-        transform: scale(.85);
-        
+        transform: scale(1);
       }
+      
+      @media only screen and (min-width: 900px) {
+        height: 100vh;
+        width: auto;
+        margin-top: 0;
+        img {
+          transform: scale(.85);
+        }
+      }
+
+      
     }
 
     #left-container {
@@ -121,5 +137,18 @@ body {
 
 
 
+  }
+
+  footer {
+    padding: 1em .5em;
+    p {
+      text-align: right;
+      //font-size: 1.3rem;
+
+      a {
+        font-weight: bold;
+        
+      }
+    }
   }
 }

@@ -1,0 +1,82 @@
+@use './App.scss';
+
+
+
+#timer-container {
+    // /border: solid red;
+    position: absolute;
+    top: 0;
+    margin: .5em;
+    //right: 0;
+    //height: 100vh;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //background-color: seagreen;
+    z-index: 1;
+    gap: .5em;
+    transition: .8s;
+    //padding: 1em;
+
+    @media only screen and (min-width: 900px) {
+       height: max-content;
+       //width: 50vw;
+    }
+
+    #input-wrapper {
+        //border: solid blue;
+        display: flex;
+        gap: .5em;
+
+        .time-input {
+            //width: max-content;
+            //border: solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            //gap: .3em;
+
+            label {
+                font-weight: bold;
+                margin-bottom: .3em;
+            }
+            
+            input {
+                width: 100%;
+                padding: .3em;
+                font-size: 1.2rem;
+                text-align: center;
+                //background: transparent;
+                border: none;
+                border-radius: .3em;
+                
+                &:hover, &:focus, &:active {
+                    background-color: white;
+                    //border: solid 1px;
+                }
+
+            }
+        }
+    }
+
+    #timer-controls {
+        //border: solid red;
+        display: flex;
+        
+        gap: .3em;
+        button {
+            width: 100%;
+            @include App.btns;
+        }
+    }
+}
+
+.hide {
+    left: -100%;
+}
+
+.show {
+    left: 0;
+}

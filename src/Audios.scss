@@ -1,0 +1,115 @@
+@use "./App.scss";
+
+$track-radius: 5px;
+
+//track styling
+@mixin track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+}
+
+//thumb
+@mixin thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: -6.5px;
+  cursor: pointer;
+}
+
+
+
+
+  #audio-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+
+    .audio-player {
+      //border: solid green;
+      width: 100%;
+      margin: 1em 0;
+
+      label {
+        //border: solid green;
+        font-size: 1.2rem;
+        font-weight: bold;
+        
+      }
+      .controls {
+        margin-top: 1em;
+        display: flex;
+        button {
+          cursor: pointer;
+          //background: transparent;
+          border-radius: 50%;
+          border: none;
+          font-size: 1.3rem;
+          padding-bottom: .2em;
+          transform: scaleX(1.5);
+          background-color: rgba(0, 0, 0, 0);
+
+          &:hover, &:focus {
+              background-color: rgba(102, 102, 102, 0.5);
+          }
+        }
+        input {
+          -webkit-appearance: none;
+          width: 100%;
+          padding-left: 1em;
+          background: transparent;
+
+          &::focus {
+            outline: none;
+          }
+
+          &::-webkit-slider-runnable-track {
+            @include track;
+            border-radius: $track-radius;
+          }
+          &::-webkit-slider-thumb {
+            @include thumb;
+            -webkit-appearance: none;
+          }
+
+          &::-moz-range-track {
+            @include track;
+            border-radius: $track-radius;
+          }
+
+          &::-moz-range-thumb {
+            @include thumb;
+          }
+
+          &::-ms-track {
+            @include track;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+          }
+
+          &::-ms-fill-lower {
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #000000;
+          }
+
+          &::-ms-fill-upper {
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #000000;
+          }
+
+          &::-ms-thumb {
+            @include thumb;
+          }
+        }
+      }
+    }
+  }

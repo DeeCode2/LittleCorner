@@ -62,7 +62,7 @@ function App() {
     <>
       <div id='settings-container'>
         <button type='button' onClick={toggleTimer}>Timer</button>
-        <button type='button'>To-do</button>
+        {/* <button type='button'>To-do</button> */}
         <button onClick={toggleTheme} id='toggle-scene'>
           <span>{theme}</span>
         </button>
@@ -73,9 +73,9 @@ function App() {
       <main className={`App ${theme} corner`}>
         <section id='scene-container'>
           {theme == 'light' ? (
-            <img src='/scenes/lc-day-cropped.png' />
+            <img src='/scenes/lc-day-cropped - Copy.png' />
           ) : (
-            <img src='/scenes/lc-night-cropped.png' />
+            <img src='/scenes/lc-night-cropped - Copy.png' />
           )}
           {/* <img src='/scenes/day.jpg'/> */}
         </section>

@@ -18,22 +18,26 @@ $track-radius: 5px;
   cursor: pointer;
 }
 
-
-
-
   #audio-container {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+    @media only screen and (min-width: 900px) {
+      align-items: start;
+    }
 
 
 
     .audio-player {
       //border: solid green;
       width: 100%;
-      margin: 1em 0;
+      margin: .5em 0;
+
+      @media only screen and (min-width: 900px) {
+        width: 80%;
+      }
 
       label {
         //border: solid green;
@@ -42,7 +46,8 @@ $track-radius: 5px;
         
       }
       .controls {
-        margin-top: 1em;
+        //border: solid red;
+        margin-top: .5em;
         display: flex;
         button {
           cursor: pointer;

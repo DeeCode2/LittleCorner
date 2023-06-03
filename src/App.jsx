@@ -11,7 +11,7 @@ function App() {
   //scene will cover entire page
   //give user option to hide menu and audio corner
 
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'Light');
   const toggleMenu = () => {
     let menu = document.querySelector('#menu-container');
     if (menu.classList.contains('hide')) {
@@ -38,13 +38,13 @@ function App() {
   }
 
   const toggleTheme = (e) => {
-    if (theme == 'light') {
-      setTheme('dark');
+    if (theme == 'Light') {
+      setTheme('Dark');
       // document
       //   .getElementById('toggle-btn')
       //   .setAttribute('aria-pressed', 'true');
     } else {
-      setTheme('light');
+      setTheme('Light');
       // document
       //   .getElementById('toggle-btn')
       //   .setAttribute('aria-pressed', 'false');
@@ -59,7 +59,7 @@ function App() {
   return (
     //LIGHT AND DARK THEME
 
-    <>
+    <div className='${theme}'>
       <div id='settings-container'>
         <button type='button' onClick={toggleTimer}>Timer</button>
         {/* <button type='button'>To-do</button> */}
@@ -72,7 +72,7 @@ function App() {
 
       <main className={`App ${theme} corner`}>
         <section id='scene-container'>
-          {theme == 'light' ? (
+          {theme == 'Light' ? (
             <img src='/scenes/lc-day-cropped - Copy.png' />
           ) : (
             <img src='/scenes/lc-night-cropped - Copy.png' />
@@ -94,7 +94,7 @@ function App() {
       <footer>
             <p>Inspired by <a href='' target='b_blank'>I Miss My Cafe</a> and <a href='https://store.steampowered.com/app/1369320/Virtual_Cottage/' target='_blank'>Virtual Cottage</a> </p>
       </footer>
-    </>
+    </div>
   );
 }
 

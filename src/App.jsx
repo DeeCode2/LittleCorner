@@ -85,7 +85,7 @@ function App() {
 
           <div id='title'>
             <h1>Little Corner</h1>
-            <p>Lorem ipsum sit dolor amet</p>
+            {/* <p>Lorem ipsum sit dolor amet</p> */}
           </div>
 
           <Audios />

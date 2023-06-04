@@ -33,7 +33,7 @@ $track-radius: 5px;
     .audio-player {
       //border: solid green;
       width: 100%;
-      margin: .5em 0;
+      margin: .8em 0;
 
       @media only screen and (min-width: 900px) {
         width: 80%;
@@ -42,12 +42,12 @@ $track-radius: 5px;
       label {
         //border: solid green;
         font-size: 1.2rem;
-        font-weight: bold;
+        //font-weight: bold;
         
       }
       .controls {
         //border: solid red;
-        margin-top: .5em;
+        //margin-top: .3em;
         display: flex;
         button {
           cursor: pointer;

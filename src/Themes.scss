@@ -1,8 +1,21 @@
 @use "./App.scss";
 
-.dark {
+.Dark {
   background-color: App.$night;
   color: App.$white;
+
+  button {
+    border: solid 3px App.$white;
+    color: App.$white;
+  }
+
+  #timer-container {
+    input {
+      border: solid 3px App.$white;
+    }
+  }
+
+  
 
   .App {
     //color: App.$white;
@@ -50,9 +63,22 @@
   }
 }
 
-.light {
+.Light {
   background-color: App.$day;
   color: App.$black;
+
+  button {
+    border: solid 3px App.$black;
+    color: App.$black;
+  }
+
+  #timer-container {
+    //border: solid red;
+    input {
+      border: solid 3px App.$black;
+    }
+  }
+
   .App {
     .audio-player {
       button {
@@ -94,5 +120,7 @@
         }
       }
     }
+
+    
   }
 }

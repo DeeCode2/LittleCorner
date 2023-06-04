@@ -1,25 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+//import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600&family=Sniglet:wght@800&display=swap');
 
 //FONTS
-$header: 'Calistoga', cursive, serif;
-$main-text: Georgia, serif;
+$header: 'Sniglet', sans-serif;
+$main-text: 'Mali', sans-serif;
 
 //FONT SIZE
-$header-size: 4.5em;
+$header-size: 4em;
 
 //COLOR
-$night: #19191c;
-$day: rgb(222, 245, 255);
+$night: #231e2c;
+$day: #ffe8d6;
 $black: #2c2b2b;
-$white: #edece0;
+$white: #fcfbed;
+$green: #013c24;
 
 //BUTTONS
 @mixin btns {
-  padding: .3em;
+  padding: .7em;
   font-size: 1rem;
-  border-radius: .3em;
-  border: none;
+  border-radius: .5em;
+  font-family: $main-text;
+  font-weight: bold;
+  
   cursor: pointer;
+  background-color: transparent;
+
 }
 
 * {
@@ -30,10 +37,11 @@ $white: #edece0;
 
 body {
   overflow-x: hidden;
+  //border: solid green;
   
   @media only screen and (min-width: 900px) {
     //height: 100vh;
-    
+    padding: 0em 5em;
     //grid-template-areas: "a b c";
     //grid-template-columns: 1fr 2fr 1fr;
   }
@@ -42,6 +50,7 @@ body {
     //height: 100%;
     //border: solid blue;
     position: absolute;
+    top: 0;
     right: 0;
     button {
       @include btns;
@@ -65,7 +74,7 @@ body {
     flex-direction: column-reverse;
     //display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-family: $main-text;
 
     @media only screen and (min-width: 900px) {
@@ -79,6 +88,8 @@ body {
     h1 {
       font-family: $header;
       font-size: $header-size;
+      //border: solid red;
+      margin-bottom: .5em;
     }
 
     
@@ -105,7 +116,7 @@ body {
         width: auto;
         margin-top: 0;
         img {
-          transform: scale(.95);
+          transform: scale(.85);
         }
       }
 

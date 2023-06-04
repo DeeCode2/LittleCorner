@@ -73,9 +73,9 @@ function App() {
       <main className={`App ${theme} corner`}>
         <section id='scene-container'>
           {theme == 'Light' ? (
-            <img src='/scenes/lc-day-cropped - Copy.png' />
+            <img src='/scenes/lc-day-cropped - Copy.png' alt='Image of a small cozy desk next to an open window' onClick={toggleTheme}/>
           ) : (
-            <img src='/scenes/lc-night-cropped - Copy.png' />
+            <img src='/scenes/lc-night-cropped - Copy.png' alt='Image of a small cozy desk next to an open window' onClick={toggleTheme}/>
           )}
           {/* <img src='/scenes/day.jpg'/> */}
         </section>

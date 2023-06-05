@@ -10,3 +10,10 @@ export default defineConfig({
     setupFiles: './tests/setup.js',
   }
 })
+
+//correct title
+//audio plays
+//timer shows and hides onClick
+//timer starts on click
+//light/dark mode correct
+//image changes w/ light/dark mode

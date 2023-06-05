@@ -70,7 +70,7 @@ function App() {
 
       <CountdownTimer/>
 
-      <main className={`App ${theme} corner`}>
+      <main className="App">
         <section id='scene-container'>
           {theme == 'Light' ? (
             <img src='/scenes/lc-day-cropped - Copy.png' alt='Image of a small cozy desk next to an open window' onClick={toggleTheme}/>

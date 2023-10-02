@@ -61,6 +61,20 @@
       }
     }
   }
+
+  footer {
+    a {
+      color: App.$white;
+  
+      &:hover {
+        font-weight: bolder;
+      }
+  
+      &:visited {
+        color: App.$white;
+      }
+    }
+  }
 }
 
 .Light {
@@ -123,4 +137,19 @@
 
     
   }
+
+  footer {
+    a {
+      color: App.$black;
+  
+      &:hover {
+        font-weight: bolder;
+      }
+  
+      &:visited {
+        color: App.$black;
+      }
+    }
+  }
 }
+

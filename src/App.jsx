@@ -92,7 +92,7 @@ function App() {
         </section>
       </main>
       <footer>
-            <p>Inspired by <a href='' target='b_blank'>I Miss My Cafe</a> and <a href='https://store.steampowered.com/app/1369320/Virtual_Cottage/' target='_blank'>Virtual Cottage</a> </p>
+            <p>Inspired by <a href='https://imissmycafe.com/' target='b_blank'>I Miss My Cafe</a> and <a href='https://store.steampowered.com/app/1369320/Virtual_Cottage/' target='_blank'>Virtual Cottage</a> </p>
       </footer>
     </div>
   );
